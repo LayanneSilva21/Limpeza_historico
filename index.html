@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Limpeza v3 - Inteligente</title>
+    <title>Sistema de Limpeza</title>
     <style>
         :root { --primary: #007bff; --success: #28a745; --warning: #ffc107; --danger: #dc3545; --dark: #343a40; --purple: #6f42c1; --teal: #20c997; }
         body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
@@ -141,7 +141,7 @@
 
         await carregarDados();
 
-        if (user === 'admin' && pass === '123') return entrarNoPainel('admin');
+        if (user === 'admin' && pass === '813147') return entrarNoPainel('admin');
 
         const cadastro = listaUsuariosNuvem.find(u => u.nome === user);
         if (!cadastro) {
@@ -161,7 +161,7 @@
             renderizarAdmin();
         } else {
             document.getElementById('painel-func').classList.add('ativa');
-            document.getElementById('boas-vindas').innerText = `Olá, ${user} 👋`;
+            document.getElementById('boas-vindas').innerText = `Olá, ${user} 👋 Essas são suas tarefas!`;
             setDia(new Date().toLocaleDateString('pt-BR', {weekday: 'long'}).split('-')[0].charAt(0).toUpperCase() + new Date().toLocaleDateString('pt-BR', {weekday: 'long'}).split('-')[0].slice(1));
         }
     }
